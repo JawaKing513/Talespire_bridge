@@ -1,7 +1,7 @@
 const http = require("http");
 const { PassThrough } = require("stream");
 
-const PORT = 9000; // The public port
+const PORT = process.env.PORT || 9000;
 let localServerUrl = null; // Set via the /bridge command
 
 const server = http.createServer((req, res) => {
